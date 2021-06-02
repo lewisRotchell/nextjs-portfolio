@@ -1,0 +1,23 @@
+import React from "react";
+import classes from "./ProjectCard.module.css";
+import LinkButton from "../UI/LinkButton";
+
+const ProjectCard = ({ image, title, description }) => {
+  return (
+    <div className={classes.card}>
+      <img src={image} alt={title} />
+      <div className={classes.cardDescription}>
+        <h3>{title}</h3>
+        <p>{description}</p>
+        <div className={classes.buttons}>
+          <LinkButton className={classes.projectButton}>
+            View Project
+          </LinkButton>
+          <LinkButton className={classes.projectButton}>View Code</LinkButton>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default ProjectCard;

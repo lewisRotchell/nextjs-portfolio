@@ -1,5 +1,5 @@
 .hero {
-  background: url("/images/hero-background.svg") no-repeat center right / cover;
+  background-color: var(--primary);
   color: #fff;
 }
 

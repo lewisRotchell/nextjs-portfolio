@@ -1,8 +1,15 @@
 .button {
-  padding: 10px 44px;
+  cursor: pointer;
+
+  height: 40px;
+  width: 227px;
+  text-align: center;
   background-color: #fff;
   color: var(--primary);
   border-radius: 95px;
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

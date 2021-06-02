@@ -48,7 +48,8 @@ ul {
   background-color: var(--primary);
   margin-top: 16px;
   margin-bottom: 52px;
-  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .section-container {

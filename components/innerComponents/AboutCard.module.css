@@ -1,0 +1,21 @@
+.card {
+  display: inline-block;
+  width: 17.25rem;
+  height: 12.25rem;
+  margin-bottom: 56px;
+}
+
+.card i {
+  color: var(--primary);
+}
+
+.card h3 {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-top: 16px;
+}
+
+.card p {
+  font-weight: 500;
+  margin-top: 5px;
+}

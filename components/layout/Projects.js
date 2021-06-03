@@ -13,6 +13,8 @@ const Projects = () => {
         description={
           "This is a project that is a very nice project using certain technologies"
         }
+        projectLink={"http://www.google.com"}
+        codeLink={""}
       />
       <ProjectCard
         title={"Project B"}
@@ -20,6 +22,8 @@ const Projects = () => {
         description={
           "This is a project that is a very nice project using certain technologies"
         }
+        projectLink={""}
+        codeLink={""}
       />
       <ProjectCard
         title={"Project C"}
@@ -27,6 +31,8 @@ const Projects = () => {
         description={
           "This is a project that is a very nice project using certain technologies"
         }
+        projectLink={""}
+        codeLink={""}
       />
     </section>
   );

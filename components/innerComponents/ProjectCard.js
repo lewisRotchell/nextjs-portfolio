@@ -2,7 +2,7 @@ import React from "react";
 import classes from "./ProjectCard.module.css";
 import LinkButton from "../UI/LinkButton";
 
-const ProjectCard = ({ image, title, description }) => {
+const ProjectCard = ({ image, title, description, projectLink, codeLink }) => {
   return (
     <div className={classes.card}>
       <img src={image} alt={title} />
@@ -10,10 +10,12 @@ const ProjectCard = ({ image, title, description }) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <div className={classes.buttons}>
-          <LinkButton className={classes.projectButton}>
+          <LinkButton target={projectLink} className={classes.projectButton}>
             View Project
           </LinkButton>
-          <LinkButton className={classes.projectButton}>View Code</LinkButton>
+          <LinkButton target={codeLink} className={classes.projectButton}>
+            View Code
+          </LinkButton>
         </div>
       </div>
     </div>

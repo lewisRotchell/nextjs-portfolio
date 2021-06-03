@@ -4,7 +4,7 @@ import classes from "./About.module.css";
 
 const About = () => {
   return (
-    <section className="section-container">
+    <section id="about" className="section-container">
       <h2>What I do</h2>
       <div className="bottom-line"></div>
       <AboutCard
@@ -16,16 +16,16 @@ const About = () => {
       />
       <AboutCard
         image={"fas fa-bolt fa-3x"}
-        title={"Responsive Design"}
+        title={"Top Performance"}
         description={
-          "I make your websites responsive so that they look just as good on a PC as they do on a mobile phone."
+          "Nobody likes waiting a long time for a website to load. I'll make sure your site is up to speed and ready to go."
         }
       />
       <AboutCard
         image={"fas fa-glasses fa-3x"}
-        title={"Responsive Design"}
+        title={"Accessibility"}
         description={
-          "I make your websites responsive so that they look just as good on a PC as they do on a mobile phone."
+          "I make sure that my websites follow accessibility guidelines so that they are usuable for everyone."
         }
       />
     </section>

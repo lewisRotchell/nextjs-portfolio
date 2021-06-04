@@ -1,0 +1,4 @@
+.aboutMain {
+  display: flex;
+  flex-direction: column;
+}

@@ -40,18 +40,21 @@ const Hero = () => {
             src="/images/hero-image.png"
             alt="cartoon image of a man on a computer"
           />
-          <h1 className={classes.heroTitle}>Hey, i'm Lewis</h1>
-          <p className={classes.heroSubtitle}>
-            I’m a Sheffield(UK) based web developer with experience in building
-            responsive websites that are simple to use and easy on the eye.
-          </p>
-          {/* May have to use reactscroll for smooth scroll */}
-          <LinkButton target={"#projects"} className={classes.heroButton}>
-            View Projects
-          </LinkButton>
+          <div className={classes.heroText}>
+            <h1 className={classes.heroTitle}>Hey, i'm Lewis</h1>
+            <p className={classes.heroSubtitle}>
+              I’m a Sheffield(UK) based web developer with experience in
+              building responsive websites that are simple to use and easy on
+              the eye.
+            </p>
+
+            <LinkButton target={"#projects"} className={classes.heroButton}>
+              View Projects
+            </LinkButton>
+          </div>
         </div>
       </section>
-      <img src="/images/hero-wave.svg" alt="" />
+      <img className={classes.wave} src="/images/hero-wave.svg" alt="" />
     </>
   );
 };

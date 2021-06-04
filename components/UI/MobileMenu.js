@@ -23,27 +23,43 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
       ref={menu}
       className={`${classes.mobileMenu}`}
       style={{
-        transform: `${menuIsOpen ? "translateX(0%)" : "translateX(+100%)"}`,
+        transform: `${menuIsOpen ? "translateX(0%)" : "translateX(-100%)"}`,
       }}
     >
       <ul className={classes.navList}>
         <li className={classes.navItems}>
-          <a onClick={() => toggleMenu()} href="#home">
+          <a
+            tabIndex={!menuIsOpen && "-1"}
+            onClick={() => toggleMenu()}
+            href="#home"
+          >
             Home
           </a>
         </li>
         <li className={classes.navItems}>
-          <a onClick={() => toggleMenu()} href="#about">
+          <a
+            tabIndex={!menuIsOpen && "-1"}
+            onClick={() => toggleMenu()}
+            href="#about"
+          >
             About
           </a>
         </li>
         <li className={classes.navItems}>
-          <a onClick={() => toggleMenu()} href="#projects">
+          <a
+            tabIndex={!menuIsOpen && "-1"}
+            onClick={() => toggleMenu()}
+            href="#projects"
+          >
             Projects
           </a>
         </li>
         <li className={classes.navItems}>
-          <a onClick={() => toggleMenu()} href="#contact">
+          <a
+            tabIndex={!menuIsOpen && "-1"}
+            onClick={() => toggleMenu()}
+            href="#contact"
+          >
             Contact
           </a>
         </li>

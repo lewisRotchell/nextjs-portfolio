@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Hamburger.module.css";
 
-const Hamburger = () => {
+const Hamburger = ({ toggleMenu }) => {
   return (
-    <button className={classes.hamburger}>
+    <button onClick={() => toggleMenu()} className={classes.hamburger}>
       <div className={classes.middleLine}></div>
     </button>
   );

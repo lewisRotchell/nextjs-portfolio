@@ -6,6 +6,10 @@ import classes from "./Hero.module.css";
 
 const Hero = () => {
   const [menuIsOpen, setMenuIsOpen] = useState(false);
+
+  const toggleMenuHandler = () => {
+    setMenuIsOpen(!menuIsOpen);
+  };
   return (
     <>
       <section id="home" className={classes.hero}>
@@ -25,9 +29,12 @@ const Hero = () => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <Hamburger />
+          <Hamburger toggleMenu={toggleMenuHandler} />
         </nav>
-        <MobileMenu />
+        {menuIsOpen && (
+          <MobileMenu menuIsOpen={menuIsOpen} toggleMenu={toggleMenuHandler} />
+        )}
+
         <div className={classes.heroMain}>
           <img
             className={classes.heroImg}

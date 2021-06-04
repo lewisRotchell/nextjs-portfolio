@@ -1,21 +1,43 @@
-import React from "react";
+import React, { useEffect, useState, useRef } from "react";
 import classes from "./MobileMenu.module.css";
+import {
+  disableBodyScroll,
+  enableBodyScroll,
+  clearAllBodyScrollLocks,
+} from "body-scroll-lock";
 
-const MobileMenu = () => {
+const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
+  const menu = useRef(menu);
+
+  useEffect(() => {
+    menuIsOpen && disableBodyScroll(menu);
+    return () => {
+      clearAllBodyScrollLocks();
+    };
+  }, [menuIsOpen]);
+
   return (
-    <div className={classes.mobileMenu}>
+    <div ref={menu} className={classes.mobileMenu}>
       <ul className={classes.navList}>
         <li className={classes.navItems}>
-          <a href="#home">Home</a>
+          <a onClick={() => toggleMenu()} href="#home">
+            Home
+          </a>
         </li>
         <li className={classes.navItems}>
-          <a href="#about">About</a>
+          <a onClick={() => toggleMenu()} href="#about">
+            About
+          </a>
         </li>
         <li className={classes.navItems}>
-          <a href="#projects">Projects</a>
+          <a onClick={() => toggleMenu()} href="#projects">
+            Projects
+          </a>
         </li>
         <li className={classes.navItems}>
-          <a href="#contact">Contact</a>
+          <a onClick={() => toggleMenu()} href="#contact">
+            Contact
+          </a>
         </li>
       </ul>
     </div>

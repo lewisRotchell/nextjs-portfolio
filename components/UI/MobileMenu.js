@@ -7,9 +7,11 @@ import {
 } from "body-scroll-lock";
 
 const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
-  const menu = useRef(menu);
+  let menu;
+  const menuRef = useRef();
 
   useEffect(() => {
+    menu = menuRef;
     menuIsOpen && disableBodyScroll(menu);
     return () => {
       clearAllBodyScrollLocks();
@@ -17,7 +19,13 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
   }, [menuIsOpen]);
 
   return (
-    <div ref={menu} className={classes.mobileMenu}>
+    <div
+      ref={menu}
+      className={`${classes.mobileMenu}`}
+      style={{
+        transform: `${menuIsOpen ? "translateX(0%)" : "translateX(+100%)"}`,
+      }}
+    >
       <ul className={classes.navList}>
         <li className={classes.navItems}>
           <a onClick={() => toggleMenu()} href="#home">

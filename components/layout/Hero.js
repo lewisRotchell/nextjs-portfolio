@@ -31,9 +31,8 @@ const Hero = () => {
           </ul>
           <Hamburger toggleMenu={toggleMenuHandler} />
         </nav>
-        {menuIsOpen && (
-          <MobileMenu menuIsOpen={menuIsOpen} toggleMenu={toggleMenuHandler} />
-        )}
+
+        <MobileMenu menuIsOpen={menuIsOpen} toggleMenu={toggleMenuHandler} />
 
         <div className={classes.heroMain}>
           <img

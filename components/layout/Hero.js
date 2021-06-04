@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import LinkButton from "../UI/LinkButton";
 import Hamburger from "../UI/Hamburger";
+import MobileMenu from "../UI/MobileMenu";
 import classes from "./Hero.module.css";
 
 const Hero = () => {
+  const [menuIsOpen, setMenuIsOpen] = useState(false);
   return (
     <>
       <section id="home" className={classes.hero}>
@@ -25,6 +27,7 @@ const Hero = () => {
           </ul>
           <Hamburger />
         </nav>
+        <MobileMenu />
         <div className={classes.heroMain}>
           <img
             className={classes.heroImg}

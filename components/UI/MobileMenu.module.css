@@ -23,6 +23,11 @@
   position: relative;
 }
 
+.navItems a:focus {
+  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
+  outline: none;
+}
+
 .navItems a::after {
   content: "";
   height: 2px;

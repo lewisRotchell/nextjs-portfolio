@@ -4,8 +4,8 @@
   height: 40px;
   width: 227px;
   text-align: center;
-  background-color: #fff;
-  color: var(--primary);
+  background-color: var(--primary);
+  color: #fff;
   border-radius: 95px;
   font-size: 18px;
   font-weight: 700;

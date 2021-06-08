@@ -34,13 +34,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 1px;
+  margin-bottom: -1px;
 }
 
 .heroImg {
   width: 267px;
   height: 267px;
   margin-top: 34px;
+  margin-bottom: 1px;
 }
 
 .heroText {
@@ -48,6 +49,7 @@
   flex-direction: column;
   align-items: center;
   width: 320px;
+  margin-bottom: 1px;
 }
 
 .heroTitle {
@@ -70,14 +72,15 @@
 }
 
 @media (min-width: 768px) {
-  .navList {
-    display: flex;
-  }
 }
 
 @media (min-width: 1000px) {
   .nav {
     margin-bottom: 100px;
+  }
+
+  .navList {
+    display: flex;
   }
 
   .heroMain {

@@ -23,6 +23,14 @@ body {
   overflow-x: hidden;
 }
 
+input {
+  font-family: "Montserrat", sans-serif;
+}
+
+textarea {
+  font-family: "Montserrat", sans-serif;
+}
+
 p {
   line-height: 1.5;
 }

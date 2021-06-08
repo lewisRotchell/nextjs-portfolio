@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Footer.module.css";
 import ContactButton from "../UI/ContactButton";
+import ContactForm from "../UI/ContactForm";
 
 const Footer = () => {
   return (
@@ -12,9 +13,13 @@ const Footer = () => {
           If you are interested in working together or have any questions,
           please feel free to contact me.
         </p>
-        <ContactButton className={classes.contactButton}>
+        {/* <ContactButton
+          onClick={() => setShowModal(true)}
+          className={classes.contactButton}
+        >
           Let's Talk!
-        </ContactButton>
+        </ContactButton> */}
+        <ContactForm />
       </footer>
     </>
   );

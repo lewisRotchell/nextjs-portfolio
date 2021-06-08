@@ -58,7 +58,7 @@ const ContactForm = () => {
       </div>
       <div className={classes.controlGroup}>
         <label htmlFor="message">Message</label>
-        <textArea
+        <textarea
           id="message"
           value={enteredMessage}
           onChange={messageChangeHandler}

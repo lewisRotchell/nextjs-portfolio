@@ -82,6 +82,11 @@ ul {
   font-weight: 700;
 }
 
+/* turns focus border off for firefox */
+::-moz-focus-inner {
+  border: 0;
+}
+
 @media (min-width: 1000px) {
   h2 {
     font-size: 2rem;

@@ -33,6 +33,11 @@
   color: #fff;
 }
 
+.projectButton:focus {
+  box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--primary);
+  outline: none;
+}
+
 .projectButton:nth-child(2) {
   margin-top: 18px;
 }

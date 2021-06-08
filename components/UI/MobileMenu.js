@@ -24,6 +24,7 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
       active={menuIsOpen}
       focusTrapOptions={{
         clickOutsideDeactivates: true,
+        initialFocus: "#list",
       }}
     >
       <div
@@ -33,7 +34,7 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
           transform: `${menuIsOpen ? "translateX(0%)" : "translateX(-100%)"}`,
         }}
       >
-        <ul className={classes.navList}>
+        <ul tabIndex={-1} id="list" className={classes.navList}>
           <li className={classes.navItems}>
             <a
               tabIndex={menuIsOpen ? undefined : 1}

@@ -1,10 +1,15 @@
 import React from "react";
 import classes from "./Hamburger.module.css";
 
-const Hamburger = ({ toggleMenu }) => {
+const Hamburger = ({ toggleMenu, menuIsOpen }) => {
   return (
-    <button onClick={() => toggleMenu()} className={classes.hamburger}>
-      <div className={classes.middleLine}></div>
+    <button
+      onClick={() => toggleMenu()}
+      className={`${"hamburger"} ${menuIsOpen ? "close-menu" : ""}`}
+    >
+      <div
+        className={`${"middleLine"} ${menuIsOpen ? "close-menu" : ""}`}
+      ></div>
     </button>
   );
 };

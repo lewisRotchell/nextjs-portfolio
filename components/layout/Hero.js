@@ -29,7 +29,7 @@ const Hero = () => {
               <a href="#contact">Contact</a>
             </li>
           </ul>
-          <Hamburger toggleMenu={toggleMenuHandler} />
+          <Hamburger toggleMenu={toggleMenuHandler} menuIsOpen={menuIsOpen} />
         </nav>
 
         <MobileMenu menuIsOpen={menuIsOpen} toggleMenu={toggleMenuHandler} />

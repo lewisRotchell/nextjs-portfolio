@@ -35,7 +35,15 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
         }}
       >
         <ul tabIndex={-1} id="list" className={classes.navList}>
-          <li className={classes.navItems}>
+          <button
+            style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
+            onClick={() => toggleMenu()}
+            className={classes.emptyHamburgerButton}
+          ></button>
+          <li
+            style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
+            className={classes.navItems}
+          >
             <a
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
@@ -44,7 +52,10 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
               Home
             </a>
           </li>
-          <li className={classes.navItems}>
+          <li
+            style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
+            className={classes.navItems}
+          >
             <a
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
@@ -53,7 +64,10 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
               About
             </a>
           </li>
-          <li className={classes.navItems}>
+          <li
+            style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
+            className={classes.navItems}
+          >
             <a
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
@@ -62,7 +76,10 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
               Projects
             </a>
           </li>
-          <li className={classes.navItems}>
+          <li
+            style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
+            className={classes.navItems}
+          >
             <a
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}

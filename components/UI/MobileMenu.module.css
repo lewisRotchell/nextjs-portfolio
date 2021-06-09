@@ -9,7 +9,11 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: transform 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navList:focus {
+  outline: none;
 }
 
 .navItems {
@@ -41,4 +45,19 @@
 
 .navItems a:hover::after {
   width: 100%;
+}
+
+.emptyHamburgerButton {
+  position: absolute;
+  top: 23px;
+  right: 20px;
+  width: 40px;
+  height: 20px;
+  background-color: transparent;
+  border: none;
+}
+
+.emptyHamburgerButton:focus {
+  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
+  outline: none;
 }

@@ -23,11 +23,37 @@
 }
 
 .navItems {
-  padding: 0 12px;
+  padding: 0 16px;
+  cursor: pointer;
 }
 
 .navItems a {
   color: #fff;
+  position: relative;
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+
+.navItems a::after {
+  content: "";
+  height: 2px;
+  width: 0%;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.5s;
+  opacity: 0;
+}
+
+.navItems a:hover::after {
+  width: 100%;
+  opacity: 1;
+}
+
+.navItems a:focus-visible {
+  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
+  outline: none;
 }
 
 .heroMain {
@@ -72,7 +98,7 @@
   margin-bottom: 16px;
 }
 
-.heroButton:focus {
+.heroButton:focus-visible {
   box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
   outline: none;
 }

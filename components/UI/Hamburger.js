@@ -5,10 +5,12 @@ const Hamburger = ({ toggleMenu, menuIsOpen }) => {
   return (
     <button
       onClick={() => toggleMenu()}
-      className={`${"hamburger"} ${menuIsOpen ? "close-menu" : ""}`}
+      className={`${classes.hamburger} ${menuIsOpen ? classes.closeMenu : ""}`}
     >
       <div
-        className={`${"middleLine"} ${menuIsOpen ? "close-menu" : ""}`}
+        className={`${classes.middleLine} ${
+          menuIsOpen ? classes.closeMenu : ""
+        }`}
       ></div>
     </button>
   );

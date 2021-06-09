@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link, animateScroll as scroll } from "react-scroll";
 import LinkButton from "../UI/LinkButton";
 import Hamburger from "../UI/Hamburger";
 import MobileMenu from "../UI/MobileMenu";
@@ -17,16 +18,52 @@ const Hero = () => {
           <img src="/images/Logo.png" alt="lewis rotchell web developer logo" />
           <ul className={classes.navList}>
             <li className={classes.navItems}>
-              <a href="#home">Home</a>
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+                href="home"
+              >
+                Home
+              </Link>
             </li>
             <li className={classes.navItems}>
-              <a href="#about">About</a>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+                href="about"
+              >
+                About
+              </Link>
             </li>
             <li className={classes.navItems}>
-              <a href="#projects">Projects</a>
+              <Link
+                to="projects"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+                href="projects"
+              >
+                Projects
+              </Link>
             </li>
             <li className={classes.navItems}>
-              <a href="#contact">Contact</a>
+              <Link
+                to="contact"
+                spy={true}
+                smooth={true}
+                offset={-30}
+                duration={500}
+                href="contact"
+              >
+                Contact
+              </Link>
             </li>
           </ul>
           <Hamburger toggleMenu={toggleMenuHandler} menuIsOpen={menuIsOpen} />
@@ -48,7 +85,7 @@ const Hero = () => {
               the eye.
             </p>
 
-            <LinkButton target={"#projects"} className={classes.heroButton}>
+            <LinkButton target={"projects"} className={classes.heroButton}>
               View Projects
             </LinkButton>
           </div>

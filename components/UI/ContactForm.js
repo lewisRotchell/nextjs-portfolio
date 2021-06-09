@@ -37,7 +37,7 @@ const ContactForm = () => {
   return (
     <form className={classes.contactForm}>
       <div className={classes.controlGroup}>
-        <label htmlFor="name">Name</label>
+        <label htmlFor="name">Name*</label>
         <input
           type="text"
           id="name"
@@ -46,8 +46,9 @@ const ContactForm = () => {
           onBlur={nameBlurHandler}
         />
       </div>
+
       <div className={classes.controlGroup}>
-        <label htmlFor="email">Email</label>
+        <label htmlFor="email">Email*</label>
         <input
           type="email"
           id="email"
@@ -57,7 +58,7 @@ const ContactForm = () => {
         />
       </div>
       <div className={classes.controlGroup}>
-        <label htmlFor="message">Message</label>
+        <label htmlFor="message">Message*</label>
         <textarea
           id="message"
           value={enteredMessage}

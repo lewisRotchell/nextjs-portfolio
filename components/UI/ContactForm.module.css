@@ -36,8 +36,8 @@
   border: 2px solid var(--primary);
 }
 
-.controlGroup input:focus,
-.controlGroup textArea:focus {
+.controlGroup input:focus-visible,
+.controlGroup textArea:focus-visible {
   outline: none;
   box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--primary);
 }
@@ -48,7 +48,7 @@
   margin-right: auto;
 }
 
-.formButton:focus {
+.formButton:focus-visible {
   box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--primary);
   outline: none;
 }

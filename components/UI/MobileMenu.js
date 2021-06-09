@@ -6,6 +6,7 @@ import {
   enableBodyScroll,
   clearAllBodyScrollLocks,
 } from "body-scroll-lock";
+import { Link, animateScroll as scroll } from "react-scroll";
 
 const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
   let menu;
@@ -44,49 +45,69 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
             style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
             className={classes.navItems}
           >
-            <a
+            <Link
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
+              to="home"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
               href="#home"
             >
               Home
-            </a>
+            </Link>
           </li>
           <li
             style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
             className={classes.navItems}
           >
-            <a
+            <Link
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
-              href="#about"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
+              href="about"
             >
               About
-            </a>
+            </Link>
           </li>
           <li
             style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
             className={classes.navItems}
           >
-            <a
+            <Link
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
               href="#projects"
             >
               Projects
-            </a>
+            </Link>
           </li>
           <li
             style={{ visibility: `${menuIsOpen ? "visible" : "hidden"}` }}
             className={classes.navItems}
           >
-            <a
+            <Link
               tabIndex={menuIsOpen ? undefined : 1}
               onClick={() => toggleMenu()}
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-30}
+              duration={500}
               href="#contact"
             >
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

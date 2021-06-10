@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import axios from "axios";
 import classes from "./ContactForm.module.css";
 import useInput from "../../hooks/use-input";
 import ContactButton from "./ContactButton";
@@ -9,6 +10,30 @@ const isEmail = (value) => value.trim().includes("@");
 
 const ContactForm = () => {
   const [alert, setAlert] = useState(null);
+
+  const [status, setStatus] = useState({
+    submitted: false,
+    submitting: false,
+    info: { error: false, msg: null },
+  });
+
+  const handleServerResponse = (ok, msg) => {
+    if (ok) {
+      setStatus({
+        submitted: true,
+        submitting: false,
+        info: { error: false, msg: msg },
+      });
+      setInputs({
+        email: "",
+        message: "",
+      });
+    } else {
+      setStatus({
+        info: { error: true, msg: msg },
+      });
+    }
+  };
 
   const {
     value: enteredName,
@@ -37,25 +62,50 @@ const ContactForm = () => {
     reset: resetMessage,
   } = useInput(isNotEmpty);
 
+  // useEffect(() => {
+  //   setStatus({
+  //     submitted: false,
+  //     submitting: false,
+  //     info: { error: false, msg: null },
+  //   });
+  // }, []);
+
   const submitFormHandler = (e) => {
     e.preventDefault();
 
     if (!enteredNameIsValid || !enteredEmailIsValid || !enteredMessageIsValid) {
       setAlert({
-        alertMsg:
-          "Something went wrong, please check your details and try again!",
+        alertMsg: "Please fill in all of the fields",
         className: "danger",
       });
       setTimeout(() => setAlert(null), 5000);
     } else {
-      console.log(enteredName);
+      setStatus((prevStatus) => ({ ...prevStatus, submitting: true }));
+      axios({
+        method: "POST",
+        url: "https://formspree.io/https://formspree.io/f/mgeryvjw",
+        data: {
+          name: enteredName,
+          email: enteredEmail,
+          message: enteredMessage,
+        },
+      })
+        .then((response) => {
+          handleServerResponse(
+            true,
+            "Thank you, your message has been submitted."
+          );
+          setAlert({
+            alertMsg:
+              "Thank you for your message. I will be in touch with you ASAP!",
+            className: "success",
+          });
+          setTimeout(() => setAlert(null), 5000);
+        })
+        .catch((error) => {
+          handleServerResponse(false, error.response.data.error);
+        });
 
-      setAlert({
-        alertMsg:
-          "Thank you for your message. I will be in touch with you ASAP!",
-        className: "success",
-      });
-      setTimeout(() => setAlert(null), 5000);
       resetName();
       resetEmail();
       resetMessage();
@@ -84,6 +134,7 @@ const ContactForm = () => {
           value={enteredName}
           onChange={nameChangeHandler}
           onBlur={nameBlurHandler}
+          required
         />
       </div>
 
@@ -95,6 +146,7 @@ const ContactForm = () => {
           value={enteredEmail}
           onChange={emailChangeHandler}
           onBlur={emailBlurHandler}
+          required
         />
       </div>
       <div className={messageClasses}>
@@ -104,10 +156,18 @@ const ContactForm = () => {
           value={enteredMessage}
           onChange={messageChangeHandler}
           onBlur={messageBlurHandler}
+          required
         />
       </div>
       <div className={classes.formActions}>
-        <ContactButton className={classes.formButton}>Submit</ContactButton>
+        <ContactButton className={classes.formButton}>
+          {" "}
+          {!status.submitting
+            ? !status.submitted
+              ? "Submit"
+              : "Submitted"
+            : "Submitting..."}
+        </ContactButton>
       </div>
     </form>
   );

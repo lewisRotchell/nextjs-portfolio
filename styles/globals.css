@@ -1,3 +1,4 @@
+@import "normalize.css";
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css");
 
@@ -100,6 +101,14 @@ ul {
 @media (min-width: 1000px) {
   .hamburger {
     display: none;
+  }
+
+  .section-container {
+    margin-top: 100px;
+  }
+
+  .bottom-line {
+    margin-bottom: 75px;
   }
 }
 

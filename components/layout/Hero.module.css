@@ -142,4 +142,8 @@
     width: 340px;
     height: 340px;
   }
+
+  .wave {
+    width: 100%;
+  }
 }

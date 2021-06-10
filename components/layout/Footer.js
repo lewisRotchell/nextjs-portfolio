@@ -13,12 +13,6 @@ const Footer = () => {
           If you are interested in working together or have any questions,
           please feel free to contact me.
         </p>
-        {/* <ContactButton
-          onClick={() => setShowModal(true)}
-          className={classes.contactButton}
-        >
-          Let's Talk!
-        </ContactButton> */}
         <ContactForm />
       </footer>
     </>

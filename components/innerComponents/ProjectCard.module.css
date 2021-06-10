@@ -1,5 +1,6 @@
 .card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   padding: 28px 18px;
   border-radius: 30px;
   box-shadow: 0px 4px 4px 3px rgba(0, 0, 0, 0.3);
@@ -8,9 +9,8 @@
   margin-bottom: 56px;
 }
 
-.card img {
-  width: 299px;
-  height: 255px;
+.card:last-child {
+  margin-bottom: 0;
 }
 
 .cardDescription {
@@ -45,4 +45,20 @@
   margin-top: 33px;
   display: inline-block;
   text-align: center;
+}
+
+@media (min-width: 1000px) {
+  .card {
+    height: 335px;
+    width: 600px;
+    flex-direction: row;
+    margin-bottom: 75px;
+  }
+
+  .card:last-child {
+    margin-bottom: 0;
+  }
+  .card:nth-child(even) {
+    flex-direction: row-reverse;
+  }
 }

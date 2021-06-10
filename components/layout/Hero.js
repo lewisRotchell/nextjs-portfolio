@@ -74,7 +74,7 @@ const Hero = () => {
         <div className={classes.heroMain}>
           <img
             className={classes.heroImg}
-            src="/images/hero-image.png"
+            src="/images/hero-svg.svg"
             alt="cartoon image of a man on a computer"
           />
           <div className={classes.heroText}>

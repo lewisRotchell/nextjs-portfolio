@@ -1,0 +1,25 @@
+.alert {
+  border-radius: 30px;
+  color: #fff;
+  margin: 16px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alert p {
+  margin: 0;
+  padding: 12px 0;
+}
+
+.danger {
+  background-color: var(--error);
+}
+
+.success {
+  background-color: var(--success);
+}
+
+.text {
+  opacity: 1;
+}

@@ -5,11 +5,11 @@ import Projects from "../components/layout/Projects";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Hero />
       <About />
       <Projects />
       <Footer />
-    </div>
+    </>
   );
 }

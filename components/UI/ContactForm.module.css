@@ -52,3 +52,17 @@
   box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--primary);
   outline: none;
 }
+
+.invalid {
+  color: var(--error);
+}
+
+.invalid input,
+.invalid textarea {
+  border: 2px solid var(--error);
+}
+
+.invalid input:focus-visible,
+.invalid textarea:focus-visible {
+  box-shadow: 0 0 0 5px #fff, 0 0 0 8px var(--error);
+}

@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./ContactForm.module.css";
 import useInput from "../../hooks/use-input";
 import ContactButton from "./ContactButton";
+import Alert from "./Alert";
 
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (value) => value.trim().includes("@");
 
 const ContactForm = () => {
+  const [alert, setAlert] = useState(null);
+
   const {
     value: enteredName,
     isValid: enteredNameIsValid,
@@ -32,11 +35,48 @@ const ContactForm = () => {
     valueChangedHandler: messageChangeHandler,
     inputBlurHandler: messageBlurHandler,
     reset: resetMessage,
-  } = useInput(isEmail);
+  } = useInput(isNotEmpty);
+
+  const submitFormHandler = (e) => {
+    e.preventDefault();
+
+    if (!enteredNameIsValid || !enteredEmailIsValid || !enteredMessageIsValid) {
+      setAlert({
+        alertMsg:
+          "Something went wrong, please check your details and try again!",
+        className: "danger",
+      });
+      setTimeout(() => setAlert(null), 5000);
+    } else {
+      console.log(enteredName);
+
+      setAlert({
+        alertMsg:
+          "Thank you for your message. I will be in touch with you ASAP!",
+        className: "success",
+      });
+      setTimeout(() => setAlert(null), 5000);
+      resetName();
+      resetEmail();
+      resetMessage();
+    }
+  };
+  const nameClasses = nameHasError
+    ? `${classes.controlGroup} ${classes.invalid}`
+    : `${classes.controlGroup}`;
+
+  const emailClasses = emailHasError
+    ? `${classes.controlGroup} ${classes.invalid}`
+    : `${classes.controlGroup}`;
+
+  const messageClasses = messageHasError
+    ? `${classes.controlGroup} ${classes.invalid}`
+    : `${classes.controlGroup}`;
 
   return (
-    <form className={classes.contactForm}>
-      <div className={classes.controlGroup}>
+    <form onSubmit={submitFormHandler} className={classes.contactForm}>
+      {alert && <Alert message={alert.alertMsg} className={alert.className} />}
+      <div className={nameClasses}>
         <label htmlFor="name">Name*</label>
         <input
           type="text"
@@ -47,7 +87,7 @@ const ContactForm = () => {
         />
       </div>
 
-      <div className={classes.controlGroup}>
+      <div className={emailClasses}>
         <label htmlFor="email">Email*</label>
         <input
           type="email"
@@ -57,7 +97,7 @@ const ContactForm = () => {
           onBlur={emailBlurHandler}
         />
       </div>
-      <div className={classes.controlGroup}>
+      <div className={messageClasses}>
         <label htmlFor="message">Message*</label>
         <textarea
           id="message"

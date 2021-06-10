@@ -28,6 +28,12 @@
   margin-top: 12px;
 }
 
+.card img {
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .projectButton {
   background-color: var(--primary);
   color: #fff;

@@ -9,7 +9,7 @@ const Projects = () => {
       <div className="bottom-line"></div>
       <ProjectCard
         title={"Project A"}
-        image={"/images/hero-image.png"}
+        image={"/images/hero-svg.svg"}
         description={
           "This is a project that is a very nice project using certain technologies"
         }
@@ -18,7 +18,7 @@ const Projects = () => {
       />
       <ProjectCard
         title={"Project B"}
-        image={"/images/hero-image.png"}
+        image={"/images/hero-svg.svg"}
         description={
           "This is a project that is a very nice project using certain technologies"
         }
@@ -27,7 +27,7 @@ const Projects = () => {
       />
       <ProjectCard
         title={"Project C"}
-        image={"/images/hero-image.png"}
+        image={"/images/hero-svg.svg"}
         description={
           "This is a project that is a very nice project using certain technologies"
         }

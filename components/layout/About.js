@@ -19,7 +19,7 @@ const About = () => {
           image={"fas fa-bolt fa-3x"}
           title={"Top Performance"}
           description={
-            "Nobody likes waiting a long time for a website to load. I'll make sure your site is up to speed and ready to go."
+            "Nobody likes waiting a long time for a website to load. I'll make sure that your website is up to speed and ready to go."
           }
         />
         <AboutCard

@@ -13,7 +13,7 @@ const Projects = () => {
         description={
           "This is a project that is a very nice project using certain technologies"
         }
-        projectLink={"http://www.google.com"}
+        projectLink={""}
         codeLink={""}
       />
       <ProjectCard

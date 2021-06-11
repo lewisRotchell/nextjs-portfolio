@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from "react";
-import { useForm, ValidationError } from "@formspree/react";
+import React, { useState } from "react";
 import axios from "axios";
 import classes from "./ContactForm.module.css";
 import useInput from "../../hooks/use-input";
@@ -7,7 +6,7 @@ import ContactButton from "./ContactButton";
 import Alert from "./Alert";
 
 const isNotEmpty = (value) => value.trim() !== "";
-const isEmail = (value) => value.trim().includes("@");
+const isEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 
 const ContactForm = () => {
   const [alert, setAlert] = useState(null);
@@ -69,7 +68,7 @@ const ContactForm = () => {
       setServerState({ submitting: true });
       axios({
         method: "POST",
-        url: "https://formspree.io/p/1697830898050793114/f/contactMe",
+        url: "https://formspree.io/p/1698208721861082974/f/contact",
         data: {
           name: enteredName,
           email: enteredEmail,

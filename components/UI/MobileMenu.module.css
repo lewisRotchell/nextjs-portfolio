@@ -9,20 +9,19 @@
   position: absolute;
   top: 0;
   left: 0;
-  --webkit-transition: transform 0.7s ease;
-  transition: transform 0.7s ease;
+  -webkit-transition: -webkit-transform 0.3 ease;
+  transition: transform 0.3s ease;
 }
 
 .menuAppear {
-  /* -webkit-transform: translateX(0);
-  transform: translateX(0); */
-  transform: translate3d(0vw, 0, 0);
+  -webkit-transform: translateX(0);
+
+  transform: translateX(0);
 }
 
 .menuDisappear {
-  /* -webkit-transform: translateX(-100%);
-  transform: translateX(-100%); */
-  transform: translate3d(-100vw, 0, 0);
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 
 .navList:focus {

@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import classes from "./MobileMenu.module.css";
 import FocusTrap from "focus-trap-react";
+import { slide as Menu } from "react-burger-menu";
 import {
   disableBodyScroll,
   enableBodyScroll,

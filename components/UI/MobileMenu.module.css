@@ -9,7 +9,15 @@
   position: absolute;
   top: 0;
   left: 0;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.5s ease;
+}
+
+.menuAppear {
+  transform: translateX(0);
+}
+
+.menuDisappear {
+  transform: translateX(-100%);
 }
 
 .navList:focus {

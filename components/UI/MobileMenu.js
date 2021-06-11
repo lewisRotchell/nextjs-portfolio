@@ -30,10 +30,12 @@ const MobileMenu = ({ menuIsOpen, toggleMenu }) => {
     >
       <div
         ref={menu}
-        className={`${classes.mobileMenu}`}
-        style={{
-          transform: `${menuIsOpen ? "translateX(0%)" : "translateX(-100%)"}`,
-        }}
+        className={`${
+          menuIsOpen ? classes.menuAppear : classes.menuDisappear
+        } ${classes.mobileMenu}`}
+        // style={{
+        //   transform: `${menuIsOpen ? "translateX(0%)" : "translateX(-100%)"}`,
+        // }}
       >
         <ul tabIndex={-1} id="list" className={classes.navList}>
           <button

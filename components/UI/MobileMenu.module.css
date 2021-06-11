@@ -13,10 +13,14 @@
 }
 
 .menuAppear {
+  will-change: transform;
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
 .menuDisappear {
+  will-change: transform;
+  -webkit-transform: translateX(-100%);
   transform: translateX(-100%);
 }
 

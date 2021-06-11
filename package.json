@@ -5,9 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "formspree": "formspree deploy"
   },
   "dependencies": {
+    "@formspree/react": "^2.2.3",
     "axios": "^0.21.1",
     "body-scroll-lock": "^3.1.5",
     "focus-trap-react": "^8.5.1",
@@ -16,5 +18,8 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-scroll": "^1.8.2"
+  },
+  "devDependencies": {
+    "@formspree/cli": "^0.9.6"
   }
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import classes from "./ContactButton.module.css";
 
-const ContactButton = ({ children, className }) => {
+const ContactButton = ({ children, className, onClick }) => {
   return (
-    <button className={`${classes.button} ${className}`}>{children}</button>
+    <button onClick={onClick} className={`${classes.button} ${className}`}>
+      {children}
+    </button>
   );
 };
 

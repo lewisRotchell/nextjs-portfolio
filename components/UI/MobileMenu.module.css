@@ -10,17 +10,17 @@
   top: 0%;
   left: 100%;
   transition: all 0.5s ease;
-  /* transition-delay: 0s;
-  -webkit-transition: -webkit-transform 0.3 ease;
-  transition: transform 0.3s ease; */
 }
 
 .menuAppear {
-  /* -webkit-transform: translateX(0);
-
-  transform: translateX(0); */
   left: 0%;
   transition: all 0.5s ease;
+}
+
+.navList {
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
 }
 
 .navList:focus {
@@ -62,8 +62,8 @@
 
 .emptyHamburgerButton {
   position: absolute;
-  top: 23px;
-  right: 20px;
+  top: -127px;
+  right: -146px;
   width: 40px;
   height: 20px;
   background-color: transparent;
@@ -73,4 +73,10 @@
 .emptyHamburgerButton:focus {
   box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
   outline: none;
+}
+
+@media (min-width: 1000px) {
+  .mobileMenu {
+    display: none;
+  }
 }

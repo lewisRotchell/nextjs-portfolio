@@ -98,6 +98,13 @@ ul {
   border: 0;
 }
 
+/* @media (min-width: 768px) {
+  html,
+  body {
+    overflow: hidden;
+  }
+} */
+
 @media (min-width: 1000px) {
   .hamburger {
     display: none;

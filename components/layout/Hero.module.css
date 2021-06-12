@@ -103,9 +103,6 @@
   outline: none;
 }
 
-@media (min-width: 768px) {
-}
-
 @media (min-width: 1000px) {
   .nav {
     margin-bottom: 100px;

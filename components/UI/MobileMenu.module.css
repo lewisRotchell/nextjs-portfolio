@@ -6,22 +6,21 @@
   z-index: 2;
   height: 100vh;
   width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  position: fixed;
+  top: 0%;
+  left: 100%;
+  transition: all 0.5s ease;
+  /* transition-delay: 0s;
   -webkit-transition: -webkit-transform 0.3 ease;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease; */
 }
 
 .menuAppear {
-  -webkit-transform: translateX(0);
+  /* -webkit-transform: translateX(0);
 
-  transform: translateX(0);
-}
-
-.menuDisappear {
-  -webkit-transform: translateX(-100%);
-  transform: translateX(-100%);
+  transform: translateX(0); */
+  left: 0%;
+  transition: all 0.5s ease;
 }
 
 .navList:focus {

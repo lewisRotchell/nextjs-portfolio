@@ -71,31 +71,29 @@
 
 .firstLine {
   position: absolute;
-  top: 1px;
+  transform: rotate(0deg) translate(0, -7px);
   width: 20px;
   height: 3px;
   background-color: #fff;
-  transform-origin: 46% 60%;
-  -webkit-transition: -webkit-transform 0.3 ease-out;
-  transition: transform 0.3s ease-out;
+  transform-origin: center;
+  transition: all 0.3s ease-out;
 }
 
 .middleLine {
   width: 20px;
   height: 3px;
   background-color: #fff;
-  -webkit-transition: -webkit-all 0.3 ease-out;
   transition: all 0.3s ease-out;
 }
 
 .lastLine {
   position: absolute;
-  bottom: 1px;
+
+  transform: translate(0, 7px);
   width: 20px;
   height: 3px;
   background-color: #fff;
-  transform-origin: 50%;
-  -webkit-transition: -webkit-transform 0.3 ease-out;
+
   transition: transform 0.3s ease-out;
 }
 
@@ -106,20 +104,17 @@
 
 /* closed menu turns to X */
 .firstLine.closeMenu {
-  -webkit-transform: rotate(45deg) scaleX(1.25);
-  transform: rotate(45deg) scaleX(1.25);
+  transform: rotate(45deg) scale(1.25, 1);
 }
 
 .middleLine.closeMenu {
   opacity: 0;
   visibility: hidden;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
+  transform: scale(0, 0);
 }
 
 .lastLine.closeMenu {
-  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-  transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  transform: rotate(-45deg) scale(1.25, 1);
 }
 
 @media (min-width: 1000px) {

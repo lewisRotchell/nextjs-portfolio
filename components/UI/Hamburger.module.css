@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-.hamburger::before {
+/* .hamburger::before {
   content: "";
   position: absolute;
   transform: translateY(-7px);
@@ -50,7 +50,7 @@
 }
 
 /* closed menu turns to X */
-.hamburger.closeMenu::before {
+/* .hamburger.closeMenu::before {
   -webkit-transform: rotate(45deg) scaleX(1.25);
   transform: rotate(45deg) scaleX(1.25);
 }
@@ -63,6 +63,64 @@
 }
 
 .hamburger.closeMenu::after {
+  -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+  transform: rotate(-45deg) scaleX(1.25) translateY(1px);
+}  */
+
+/* Experiment */
+
+.firstLine {
+  content: "";
+  position: absolute;
+  transform: translateY(-7px);
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  transform-origin: 46% 60%;
+  -webkit-transition: -webkit-transform 0.3 ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.middleLine {
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  -webkit-transition: -webkit-all 0.3 ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.lastLine {
+  content: "";
+  position: absolute;
+  -webkit-transform: translateY(7px);
+  transform: translateY(7px);
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  transform-origin: 50%;
+  -webkit-transition: -webkit-transform 0.3 ease-out;
+  transition: transform 0.3s ease-out;
+}
+
+.hamburger:focus-visible {
+  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
+  outline: none;
+}
+
+/* closed menu turns to X */
+.firstLine.closeMenu {
+  -webkit-transform: rotate(45deg) scaleX(1.25);
+  transform: rotate(45deg) scaleX(1.25);
+}
+
+.middleLine.closeMenu {
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+.lastLine.closeMenu {
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   transform: rotate(-45deg) scaleX(1.25) translateY(1px);
 }

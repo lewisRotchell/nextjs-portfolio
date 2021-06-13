@@ -8,9 +8,17 @@ const Hamburger = ({ toggleMenu, menuIsOpen }) => {
       className={`${classes.hamburger} ${menuIsOpen ? classes.closeMenu : ""}`}
     >
       <div
+        className={`${classes.firstLine} ${
+          menuIsOpen ? classes.closeMenu : ""
+        }`}
+      ></div>
+      <div
         className={`${classes.middleLine} ${
           menuIsOpen ? classes.closeMenu : ""
         }`}
+      ></div>
+      <div
+        className={`${classes.lastLine} ${menuIsOpen ? classes.closeMenu : ""}`}
       ></div>
     </button>
   );

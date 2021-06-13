@@ -104,7 +104,10 @@
 
 /* closed menu turns to X */
 .firstLine.closeMenu {
-  transform: rotate(45deg) scale(1.25, 1);
+  top: 50%;
+  left: 15%;
+  transform-origin: center;
+  transform: rotate(45deg);
 }
 
 .middleLine.closeMenu {
@@ -114,7 +117,10 @@
 }
 
 .lastLine.closeMenu {
-  transform: rotate(-45deg) scale(1.25, 1);
+  transform-origin: top;
+  top: 48%;
+  left: 15%;
+  transform: rotate(-45deg);
 }
 
 @media (min-width: 1000px) {

@@ -11,7 +11,7 @@
   cursor: pointer;
 }
 
-/* .hamburger::before {
+.hamburger::before {
   content: "";
   position: absolute;
   transform: translateY(-7px);
@@ -50,7 +50,7 @@
 }
 
 /* closed menu turns to X */
-/* .hamburger.closeMenu::before {
+.hamburger.closeMenu::before {
   -webkit-transform: rotate(45deg) scaleX(1.25);
   transform: rotate(45deg) scaleX(1.25);
 }
@@ -65,62 +65,6 @@
 .hamburger.closeMenu::after {
   -webkit-transform: rotate(-45deg) scaleX(1.25) translateY(1px);
   transform: rotate(-45deg) scaleX(1.25) translateY(1px);
-}  */
-
-/* Experiment */
-
-.firstLine {
-  position: absolute;
-  transform: rotate(0deg) translate(0, -7px);
-  width: 20px;
-  height: 3px;
-  background-color: #fff;
-  transform-origin: center;
-  transition: all 0.3s ease-out;
-}
-
-.middleLine {
-  width: 20px;
-  height: 3px;
-  background-color: #fff;
-  transition: all 0.3s ease-out;
-}
-
-.lastLine {
-  position: absolute;
-
-  transform: translate(0, 7px);
-  width: 20px;
-  height: 3px;
-  background-color: #fff;
-
-  transition: transform 0.3s ease-out;
-}
-
-.hamburger:focus-visible {
-  box-shadow: 0 0 0 5px var(--primary), 0 0 0 8px #fff;
-  outline: none;
-}
-
-/* closed menu turns to X */
-.firstLine.closeMenu {
-  top: 50%;
-  left: 15%;
-  transform-origin: center;
-  transform: rotate(45deg);
-}
-
-.middleLine.closeMenu {
-  opacity: 0;
-  visibility: hidden;
-  transform: scale(0, 0);
-}
-
-.lastLine.closeMenu {
-  transform-origin: top;
-  top: 48%;
-  left: 15%;
-  transform: rotate(-45deg);
 }
 
 @media (min-width: 1000px) {

@@ -70,9 +70,8 @@
 /* Experiment */
 
 .firstLine {
-  content: "";
   position: absolute;
-  transform: translateY(-7px);
+  top: 1px;
   width: 20px;
   height: 3px;
   background-color: #fff;
@@ -90,10 +89,8 @@
 }
 
 .lastLine {
-  content: "";
   position: absolute;
-  -webkit-transform: translateY(7px);
-  transform: translateY(7px);
+  bottom: 1px;
   width: 20px;
   height: 3px;
   background-color: #fff;

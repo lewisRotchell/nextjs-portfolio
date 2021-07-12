@@ -1,5 +1,6 @@
 import React from "react";
 import ProjectCard from "../innerComponents/ProjectCard";
+// import NextMovieImg from '/images/'
 import classes from "./Projects.module.css";
 
 const Projects = () => {

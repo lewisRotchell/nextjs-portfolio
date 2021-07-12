@@ -5,7 +5,7 @@ import LinkButton from "../UI/LinkButton";
 const ProjectCard = ({ image, title, description, projectLink, codeLink }) => {
   return (
     <div className={classes.card}>
-      <img src={`/${image}`} alt={title} />
+      <img src={`./${image}`} alt={title} />
       <div className={classes.cardDescription}>
         <h3>{title}</h3>
         <p>{description}</p>

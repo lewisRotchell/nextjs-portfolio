@@ -9,7 +9,7 @@ const Projects = () => {
       <div className="bottom-line"></div>
       <ProjectCard
         title={"Next Movie"}
-        image={"/images/next-movie-img.png"}
+        image={"images/next-movie-img.png"}
         description={
           "Search for information about your favourite movies or find out which movies are currently popular right now."
         }

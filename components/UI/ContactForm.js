@@ -5,8 +5,6 @@ import useInput from "../../hooks/use-input";
 import ContactButton from "./ContactButton";
 import Alert from "./Alert";
 
-//Test to see if email is valid or name isn't empty
-
 const isNotEmpty = (value) => value.trim() !== "";
 const isEmail = (email) => /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 

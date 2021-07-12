@@ -29,9 +29,12 @@
 }
 
 .card img {
-  width: 250px;
+  height: 100%;
+  width: 271px;
+  object-fit: cover;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
 }
 
 .projectButton {

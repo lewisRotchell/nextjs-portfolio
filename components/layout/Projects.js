@@ -8,31 +8,13 @@ const Projects = () => {
       <h2>My Projects</h2>
       <div className="bottom-line"></div>
       <ProjectCard
-        title={"Project A"}
-        image={"/images/hero-svg.svg"}
+        title={"Next Movie"}
+        image={"/images/next-movie-img.png"}
         description={
-          "This is a project that is a very nice project using certain technologies"
+          "Search for information about your favourite movies or find out which movies are currently popular right now."
         }
-        projectLink={""}
-        codeLink={""}
-      />
-      <ProjectCard
-        title={"Project B"}
-        image={"/images/hero-svg.svg"}
-        description={
-          "This is a project that is a very nice project using certain technologies"
-        }
-        projectLink={""}
-        codeLink={""}
-      />
-      <ProjectCard
-        title={"Project C"}
-        image={"/images/hero-svg.svg"}
-        description={
-          "This is a project that is a very nice project using certain technologies"
-        }
-        projectLink={""}
-        codeLink={""}
+        projectLink={"https://next-movie-7xj0unlwb-lewisrotchell.vercel.app/"}
+        codeLink={"https://github.com/lewisRotchell/next-movie"}
       />
     </section>
   );

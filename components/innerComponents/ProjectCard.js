@@ -10,10 +10,13 @@ const ProjectCard = ({ image, title, description, projectLink, codeLink }) => {
         <h3>{title}</h3>
         <p>{description}</p>
         <div className={classes.buttons}>
-          <LinkButton target={projectLink} className={classes.projectButton}>
+          <LinkButton
+            externalLink={projectLink}
+            className={classes.projectButton}
+          >
             View Project
           </LinkButton>
-          <LinkButton target={codeLink} className={classes.projectButton}>
+          <LinkButton externalLink={codeLink} className={classes.projectButton}>
             View Code
           </LinkButton>
         </div>

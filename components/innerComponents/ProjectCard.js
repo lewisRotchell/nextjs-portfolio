@@ -3,6 +3,7 @@ import classes from "./ProjectCard.module.css";
 import LinkButton from "../UI/LinkButton";
 
 const ProjectCard = ({ image, title, description, projectLink, codeLink }) => {
+  console.log(image);
   return (
     <div className={classes.card}>
       <img src={image} alt={title} />

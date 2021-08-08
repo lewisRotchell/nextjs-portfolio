@@ -18,7 +18,7 @@ const Projects = () => {
       />
       <ProjectCard
         title={"Calorie Estimator"}
-        image={"/images/calorie-estimator-img.jpg"}
+        image={"/images/calEstimatorImg.JPG"}
         description={
           "Find out how many calories you need to consume to maintain or lose weight."
         }

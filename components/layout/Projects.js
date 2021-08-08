@@ -16,6 +16,15 @@ const Projects = () => {
         projectLink={"https://next-movie-7xj0unlwb-lewisrotchell.vercel.app/"}
         codeLink={"https://github.com/lewisRotchell/next-movie"}
       />
+      <ProjectCard
+        title={"Calorie Estimator"}
+        image={"/images/calorie-estimator-img.jpg"}
+        description={
+          "Find out how many calories you need to consume to maintain or lose weight."
+        }
+        projectLink={"https://gallant-davinci-012d67.netlify.app/"}
+        codeLink={"https://github.com/lewisRotchell/calorie-estimator-v2"}
+      />
     </section>
   );
 };
